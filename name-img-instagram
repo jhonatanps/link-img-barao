@@ -7,3 +7,174 @@
 <img src="https://static.cdninstagram.com/rsrc.php/v3/y_/r/tUzYKZ-xrQK.png" alt="Baixar na App Store">
 
 <img src="https://static.cdninstagram.com/rsrc.php/v3/yE/r/QQnPXT5YsC4.png" alt="Baixar no Google Play">
+
+
+html -> 
+
+<div class="container">
+  <div class='phone-image'>
+    <img src="https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png" alt="Imagem de celular" >
+    <img src="https://www.instagram.com/static/images/homepage/screenshots/screenshot3.png/94edb770accf.png"
+                alt="App screenshot" class="app-screenshot">
+  </div>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Instagram</h1>
+      <form id="login-form">
+        <input type="text" placeholder="Telefone, nome de usuário ou email" required>
+         <input type="password" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+      </form>
+      
+       <div class="divider">
+                    <!-- linhas entre o ou -->
+                    <div class="line"></div>
+                    <div class="or">OU</div>
+                    <!-- linhas entre o ou -->
+                    <div class="line"></div>
+                </div>
+              <div class="facebook-login">
+                            <img                                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                                alt="Facebook logo">
+                            <a href="#">Entrar com o Facebook</a>
+              </div>
+ <a href="#" class="forgot-password">Esqueceu a senha?</a>
+      
+    </div>
+    
+    <div class="signup-box">
+                <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            </div>
+    <div class="download-app">
+                <p>Baixe o aplicativo</p>
+                <div class="app-links">
+                    <img src="https://static.cdninstagram.com/rsrc.php/v3/y_/r/tUzYKZ-xrQK.png" alt="Baixar na App Store">
+                    <img src="https://static.cdninstagram.com/rsrc.php/v3/yE/r/QQnPXT5YsC4.png" alt="Baixar no Google Play">
+                </div>
+            </div>
+    
+  </div>
+  
+  
+</div>
+
+css -> 
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  border: 1px solid red;
+}
+
+.container{
+  display:flex;
+  max-width: 935px;
+}
+
+.phone-image{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.phone-image img:first-child {
+    max-width: 100%;
+    height: auto;
+}
+.app-screenshot {
+    position: absolute;
+    top: 83px; 
+    left: 60%;
+    transform: translateX(-50%);
+    width: 222px; 
+    height: 433px; 
+    object-fit: cover; 
+    z-index: 1;
+}
+.login-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #8e8e8e;
+    font-size: 13px;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.or {
+    /* margin na lateral */
+    margin: 0 18px;
+}
+
+.facebook-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.facebook-login img {
+    width: 16px;
+    margin-right: 10px;
+}
+
+.facebook-login a {
+    color: #385185;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.forgot-password {
+    color: #00376b;
+    font-size: 12px;
+    text-decoration: none;
+}
+.signup-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+.signup-box a {
+    color: #0095f6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.download-app {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-app p {
+    margin-bottom: 20px;
+}
+
+.app-links img {
+    width: 136px;
+    margin: 0 5px;
+}
+
+@media (min-width: 1000px) {
+    .phone-image {
+        display: flex;
+    }
+}
